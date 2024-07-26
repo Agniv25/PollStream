@@ -34,7 +34,7 @@ PollStream is a dynamic web application designed for creating and managing polls
    git clone https://github.com/Agniv25/PollStream.git
    cd PollStream
 Install Client Dependencies
-   ```sh
+  
       cd client
       npm install
 
