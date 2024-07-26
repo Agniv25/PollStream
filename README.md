@@ -38,17 +38,23 @@ Install Client Dependencies
       cd client
       npm install
 
-
-
 Configure Server
-cd ../server
+      
+      cd ../server
 
 Create a .env file in the server directory and add the following environment variables:
-MONGOPASSWORD=your_mongodb_password
-JWTSECRET=your_jwt_secret
-npm install
+
+      MONGOPASSWORD=your_mongodb_password
+      JWTSECRET=your_jwt_secret
+Install pakcages
+
+      npm install
 
 
 
-start the client using npm run dev
-start the server using nodemon index.js
+start the client 
+
+      npm run dev
+start the server 
+
+      nodemon index.js
