@@ -7,7 +7,7 @@ export default function ViewPolls() {
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await axios.get(
-        "http://localhost:3000/poll/fetchPolls",
+        `${import.meta.env.VITE_API_URL}/poll/fetchPolls`,
         {
           withCredentials: true,
         }

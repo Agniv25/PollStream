@@ -15,7 +15,7 @@ const Home = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/users/getDetails",
+          "${process.env.URL}/users/getDetails",
           {
             params: { username: username },
             withCredentials: true,

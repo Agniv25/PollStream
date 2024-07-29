@@ -22,7 +22,7 @@ export default function CreatePoll() {
     console.log(options);
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/createPoll",
+        `${import.meta.env.VITE_API_URL}/users/createPoll`,
         {
           username: username,
           question: question,

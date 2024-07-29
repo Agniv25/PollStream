@@ -10,7 +10,7 @@ export default function Results() {
     const getResults = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/poll/getResults",
+          `${import.meta.env.VITE_API_URL}/poll/getResults`,
           {
             params: { username: username },
             withCredentials: true,
@@ -18,7 +18,7 @@ export default function Results() {
         );
         setDetails(response.data);
       } catch (err) {
-        alert(err.response.data.message);
+        alert(err.message);
       }
     };
     getResults();

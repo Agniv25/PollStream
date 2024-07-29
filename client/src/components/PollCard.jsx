@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+const socket = io(`${import.meta.env.VITE_API_URL}`);
 
 export default function PollCard({ _id, creator, question, options }) {
   const [selectedOption, setSelectedOption] = useState("");
@@ -14,7 +14,7 @@ export default function PollCard({ _id, creator, question, options }) {
     const checkIfVoted = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/poll/checkVote",
+          `${import.meta.env.VITE_API_URL}/poll/checkVote`,
           {
             params: { pollId: _id, username: username },
             withCredentials: true,
@@ -42,7 +42,7 @@ export default function PollCard({ _id, creator, question, options }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/poll/vote",
+        `${import.meta.env.VITE_API_URL}/poll/vote`,
         { pollId: _id, selectedOption, username: username },
         { withCredentials: true }
       );
