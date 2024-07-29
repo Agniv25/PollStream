@@ -7,8 +7,8 @@ import {
   getResults,
 } from "../controllers/poll.js";
 const router = express.Router();
-router.get("/fetchPolls", verifyToken, fetchPolls);
+router.get("/fetchPolls", fetchPolls);
 // router.post("/vote", verifyToken, setVotes);
-router.get("/checkVote", verifyToken, checkVote);
-router.get("/getResults", verifyToken, getResults);
+router.get("/checkVote", checkVote);
+router.get("/getResults", getResults);
 export default router;
